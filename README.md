@@ -14,3 +14,5 @@ E kam kriju nje workflow te ri,  deployment.yml  i njejt sikur me lart por me dy
 Detyra e radhes asht me i nda tani ne paralele edhe me ba trigger Events
 
 Sequential jobs, bahen me psh  needs:test shih fajllin sequential-deployment.yml
+
+Qysh e testojm sequntial jobs, e bajm break prap ne rreshtin 19, sikur me lart
