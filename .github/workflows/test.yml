@@ -13,9 +13,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-        # Third Step
+          
+        # Third Step will install all package-lock.json but with locked versions
       - name: Install dependencies 
         run: npm ci
+        
+        # Forth Step
       - name: Run tests
         run: npm test
       
