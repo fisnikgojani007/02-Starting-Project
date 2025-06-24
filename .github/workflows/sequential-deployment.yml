@@ -1,0 +1,49 @@
+name: Deploy Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
+      - name: Get code
+        uses: actions/checkout@v3
+        
+        # Second Step
+      - name: Install NodeJS 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          
+        # Third Step will install all package-lock.json but with locked versions
+      - name: Install dependencies 
+        run: npm ci
+        
+        # Forth Step
+      - name: Run tests
+        run: npm test
+        
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies 
+        run: npm ci
+        # E targeton "build": "vite build"  ne fajllin package.json
+      - name: Build project
+        run: npm run build
+        # We should upload somwhere, but we don't have host
+      - name: Deploy
+        run: echo "Deploying ...."
+
+
+
+
+
+
+
+        
