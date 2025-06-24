@@ -1,0 +1,9 @@
+name: Output Information
+on: workflow_dispatch
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+        # Getting some metadate info with Expressions Context 
+      - name: Output Github contect
+        run: echo "${{ toJSON(github) }}"
