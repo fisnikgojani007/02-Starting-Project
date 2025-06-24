@@ -12,3 +12,5 @@ E bajm nje commit te ri edhe new workflow
 
 E kam kriju nje workflow te ri,  deployment.yml  i njejt sikur me lart por me dy jobs inside, qe jan paralele.
 Detyra e radhes asht me i nda tani ne paralele edhe me ba trigger Events
+
+Sequential jobs, bahen me psh  needs:test shih fajllin sequential-deployment.yml
