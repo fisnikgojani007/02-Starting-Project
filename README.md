@@ -9,3 +9,6 @@ E ndrrojm nga: expect(screen.getByTestId('help-area')).toBeInTheDocument();
 Ne problem te ri: expect(screen.getByTestId('help-area')).not.toBeInTheDocument();
 
 E bajm nje commit te ri edhe new workflow
+
+E kam kriju nje workflow te ri,  deployment.yml  i njejt sikur me lart por me dy jobs inside, qe jan paralele.
+Detyra e radhes asht me i nda tani ne paralele edhe me ba trigger Events
