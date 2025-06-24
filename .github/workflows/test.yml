@@ -1,0 +1,23 @@
+name: Test Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it
+      - name: Get code
+        uses: actions/checkout@v3
+        
+        # Second Step
+      - name: Install NodeJS 
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+        # Third Step
+      - name: Install dependencies 
+        run: npm ci
+      - name: Run tests
+        run: npm test
+      
+      
+      
