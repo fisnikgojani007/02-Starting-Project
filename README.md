@@ -16,3 +16,7 @@ Detyra e radhes asht me i nda tani ne paralele edhe me ba trigger Events
 Sequential jobs, bahen me psh  needs:test shih fajllin sequential-deployment.yml
 
 Qysh e testojm sequntial jobs, e bajm break prap ne rreshtin 19, sikur me lart
+
+Disa sequential jobs  on: [push, workflow_dispatch]
+
+Disa Expressions and Outputs me github:  run: echo "${{ toJSON(github) }}"
